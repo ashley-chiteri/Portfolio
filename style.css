@@ -66,7 +66,7 @@ nav{
     width: 90%;
 }
 .btn{
-    padding: 0.75rem 1.5rem;
+    padding: 0.7rem 1rem;
     font-size: 1rem;
     color: var(--white);
     background-color: var(--ascents);
@@ -202,14 +202,14 @@ section .header{
     padding-bottom: 20px;
     margin: auto;
 }
-.projects .card button{
+.projects .card a{
     color: var(--white);
     /*margin-left: 90px;*/
     background-color: transparent;
     border: 2px solid var(--white);
 }
 
-.projects .card button:hover{
+.projects .card a:hover{
     background-color: var(--ascents);
     border-color: var(--ascents);
 }
@@ -225,6 +225,7 @@ section .header{
     background-color: var(--light-card);
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: 2px solid var(--white);
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -240,12 +241,10 @@ section .header{
 }
 .skills .card .content .division{
     display: flex;
+    gap: 1rem;
 
 }
-.skills .card .content .division .lang{
-    padding-left: 100px;
 
-}
 .skills .card p{
     color: var(--white);
     margin-bottom: 0.75rem;
@@ -331,6 +330,7 @@ form button{
 footer .socials{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 footer .socials a{
@@ -374,8 +374,20 @@ footer  .socials a:hover{
     }
 }
 @media (width < 600px){
+    header{
+        height: 75vh;
+    }
     header .image{
         display: none;
+    }
+    header .content h4{
+        margin-bottom: 1.5rem;
+    }
+    header .content h1{
+        margin-bottom: 1.5rem;
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 2.8rem;
     }
 
     .projects{
@@ -383,6 +395,44 @@ footer  .socials a:hover{
     }
     .skills{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about .card{
+        padding: 1.5rem;
+        background-color: var(--dark-card);
+        border: 2px solid var(--white);
+        border-radius: 15px;
+        margin-bottom: 3rem;
+    }
+    .about .card h4{
+        margin-bottom: 1.5rem;
+        color: var(--white);
+        text-align: center;
+        padding-bottom: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .about .card p{
+        color: var(--white);
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .about p{
+        color: var(--white);
+        line-height: 21px;
+    }
+    .msg{
+        height: 70vh;
+    }
+    
+    
+    form input, form textarea{
+        font-size: 1rem;
+    }
+    form button{
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        width: 150px;
     }
 
 }
