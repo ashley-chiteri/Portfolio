@@ -83,7 +83,7 @@ nav{
 .container{
     max-width: 1200px;
     margin: auto;
-    padding: 5rem 2rem;
+    padding: 4.5rem 2rem;
 }
 
 .blur{
@@ -164,7 +164,7 @@ section .header{
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
-.projects .card, .skills .card{
+.projects .card{
     padding: 3rem 2rem;
     background-color: var(--dark-card);
     display: flex;
@@ -174,12 +174,14 @@ section .header{
     transition: all 0.3s ease;
 }
 
-.projects .card:hover,.skills .card:hover{
+.projects .card:hover{
     background-color: var(--light-card);
     border-color: var(--white);
 }
 .projects .card .content{
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 2rem;
     
 }
@@ -188,7 +190,7 @@ section .header{
     color: var(--white);
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid var(--dark-white);
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -197,13 +199,12 @@ section .header{
     max-width: 300px;
     max-height: 225px;
     border-radius: 5px;
-    padding-left: 40px;
     padding-bottom: 20px;
     margin: auto;
 }
 .projects .card button{
     color: var(--white);
-    margin-left: 90px;
+    /*margin-left: 90px;*/
     background-color: transparent;
     border: 2px solid var(--white);
 }
@@ -219,6 +220,16 @@ section .header{
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
+.skills .card{
+    padding: 3rem 2rem;
+    background-color: var(--light-card);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--white);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
 .skills .card h4{
     margin-bottom: 1.5rem;
     color: var(--white);
@@ -226,6 +237,14 @@ section .header{
     padding-bottom: 10px;
     font-size: 1.5rem;
     font-weight: 500;
+}
+.skills .card .content .division{
+    display: flex;
+
+}
+.skills .card .content .division .lang{
+    padding-left: 100px;
+
 }
 .skills .card p{
     color: var(--white);
@@ -236,4 +255,134 @@ section .header{
     color: var(--dark-white);
     font-size: 1.2rem;
     margin-right: 0.3rem;
+}
+.about{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about .card{
+    padding: 2rem;
+    background-color: var(--dark-card);
+    border: 2px solid var(--white);
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+.about .card h4{
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.about .card p{
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.about p{
+    color: var(--white);
+    line-height: 35px;
+    letter-spacing: 1.5px;
+}
+.msg{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+
+}
+
+form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    font-size: 1rem;
+    color: var(--black);
+}
+form button{
+    padding: 10px;
+    background-color: var(--ascents);
+    color: var(--white);
+    font-size: 1rem;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+footer .socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+footer .socials a{
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer  .socials a:hover{
+    color: var(--white);
+    background-color: var(--ascents);
+    border-color: var(--ascents);
+}
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: var(--white);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@media (width <900px){
+    .nav-links{
+        display: none;
+    }
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skills{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (width < 600px){
+    header .image{
+        display: none;
+    }
+
+    .projects{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .skills{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
