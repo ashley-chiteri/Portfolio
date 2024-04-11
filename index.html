@@ -173,13 +173,17 @@
     <section class="container">
         <h2 class="header">CONTACT ME</h2>
         <div class="msg">
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form action="https://api.web3forms.com/submit" id="form" method="POST">
                 <input type="hidden" name="access_key" value="f75084d7-028d-4329-b763-0923ed0687d4">
+                <input type="hidden" name="subject" value="New client from portfolio">
+                <input type="checkbox" name="botcheck" id="" style="display: none;">
                 <input type="text" name="name" placeholder="Your Name" id="name" required>
                 <input type="email" name="email" placeholder="Your email address" id="email" required>
                 <input type="text" name="phone_number" placeholder="Phone number" id="phone" required>
                 <textarea name="message" id="message" rows="5" placeholder="How can I help you?"></textarea>
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
                 <button type="submit">Send</button>
+
             </form>
         </div>
     </section>
